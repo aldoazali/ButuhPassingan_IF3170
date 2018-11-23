@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Input Description Form</title>
+  <style>
+    form {
+      width: 420px;
+    }
+    div {
+      margin-bottom: 20px;
+    }
+    label {
+      display: inline-block;
+      width: 240px;
+      text-align: right;
+      padding-right: 10px;
+    }
+    button, input {
+      float: right;
+    }
+  </style>
+</head>
+<body>
+
+<div class="edit_profile_container">
+	<table>
+		<thead>
+		<tr>
+			<th colspan="2"><span>Input Form</span></th>
+		</tr>
+		</thead>
+		<body>
+			<form method="POST" action="{{ url_for('result') }}">
+			<tr>
+				<td>Age : </td>
+			<td colspan="8"><input type="text" id="age" name="age"></td>
+			</tr>
+			<tr>
+				<td>Gender : </td>
+				<td>
+					<input type="radio" name="gender" id="gender" value="1">Male
+				</td>
+				<td>
+					<input type="radio" name="gender" id="gender" value="0">Female
+				</td>
+			</tr>
+			<tr>
+				<td>Chest Pain Type : </td>
+				<td>
+					<input type="radio" name="chest_pain" id="chest_pain" value="1">Typical Angina
+				</td>
+				<td>
+					<input type="radio" name="chest_pain" id="chest_pain" value="2">Atypical Angina
+				</td>
+			</tr>
+			<tr>
+				<td>
+					
+				</td>
+				<td>
+					<input type="radio" name="chest_pain" id="chest_pain" value="3">Non-anginal Pain
+				</td>
+				<td>
+					<input type="radio" name="chest_pain" id="chest_pain" value="2">Asymptotic
+				</td>
+			</tr>
+			<tr>
+				<td>Resting Blood Pressure : </td>
+				<td colspan="8"><input type="text" id="blood_pressure" name="blood_pressure"></td>
+			</tr>
+			<tr>
+				<td>Serum Cholestrol : </td>
+				<td colspan="8"><input type="text" id="cholestrol" name="cholestrol"></td>
+			</tr>
+			<tr>
+				<td>Fasting Blood Sugar > 120 mg/dl : </td>
+				<td>
+					<input type="radio" name="blood_sugar" id="blood_sugar" value="1">True
+				</td>
+				<td>
+					<input type="radio" name="blood_sugar" id="blood_sugar" value="0">False
+				</td>
+			</tr>
+			<tr>
+				<td>Resting ECG : </td>
+				<td>
+					<input type="radio" name="ecg" id="ecg" value="0">Normal
+				</td>
+				<td>
+					<input type="radio" name="ecg" id="ecg" value="1">Having ST-T wave abnormality
+				</td>
+				<td>
+					<input type="radio" name="ecg" id="ecg" value="2">Left Ventricular Hyperthrophy
+				</td>
+			</tr>
+			<tr>
+				<td>Max heart rate achieved : </td>
+				<td colspan="8"><input type="text" id="heart_rate" name="heart_rate"></td>
+			</tr>
+			<tr>
+				<td>Exercise induced angina : </td>
+				<td>
+					<input type="radio" name="exercise" id="exercise" value="1">Yes
+				</td>
+				<td>
+					<input type="radio" name="exercise" id="exercise" value="0">No
+				</td>
+			</tr>
+			<tr>
+				<td>ST depression induced by exercise relative to rest : </td>
+				<td colspan="8"><input type="text" id="st_depression" name="st_depression"></td>
+			</tr>
+			<tr>
+				<td>Peak exercise ST segment : </td>
+				<td>
+					<input type="radio" name="peak_exercise" id="peak_exercise" value="1">Upsloping
+				</td>
+				<td>
+					<input type="radio" name="peak_exercise" id="peak_exercise" value="2">Flat
+				</td>
+				<td>
+					<input type="radio" name="peak_exercise" id="peak_exercise" value="3">Downsloping
+				</td>
+			</tr>
+			<tr>
+				<td>Number of major vessels (0-3) colored by flourosopy</td>
+				<td colspan="8"><input type="text" id="vessels" name="vessels"></td>
+			</tr>
+			<tr>
+				<td>Thal : </td>
+				<td>
+					<input type="radio" name="thal" id="thal" value="3">Normal
+				</td>
+				<td>
+					<input type="radio" name="thal" id="thal" value="6">Fixed Defect
+				</td>
+				<td>
+					<input type="radio" name="thal" id="thal" value="7">Reversable Defect
+				</td>
+			</tr>
+			<tr>
+				<td><button id="submit_button">Submit</button></td>
+			</tr>
+			</form>
+	</table>
+</div>
+
+</body>
+</html>
