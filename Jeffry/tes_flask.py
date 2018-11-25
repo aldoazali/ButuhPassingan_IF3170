@@ -16,7 +16,8 @@ def load_model():
 
 @app.route('/') 
 def my_form():
-    return render_template('main.html')
+	load_model()
+	return render_template('main.html')
 
 
 @app.route('/result', methods=['GET', 'POST'])
@@ -39,14 +40,15 @@ def result():
     pred = model.predict(pred_data)
     return render_template('result.html', hasil=pred[0])
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
 
-    try:
-        load_model()
-        print("Model loaded")
+#     try:
+#         load_model()
+#         print("Model loaded")
 
-    except Exception as e:
-        print("Model loading failed")
-        print(str(e))
+#     except Exception as e:
+#         print("Model loading failed")
+#         print(str(e))
+		
 
-    app.run()
+#     app.run()

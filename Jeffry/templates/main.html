@@ -4,9 +4,6 @@
   <meta charset="utf-8">
   <title>Input Description Form</title>
   <style>
-    form {
-      width: 420px;
-    }
     div {
       margin-bottom: 20px;
     }
@@ -19,22 +16,39 @@
     button, input {
       float: right;
     }
+	button {
+		font-size: 1rem;
+		padding: 0.25rem 1rem;
+		margin-top: 1rem;    
+	}
+	th {
+		margin-bottom: 2rem;
+	}
+	td {
+		padding-right: 1rem;
+		padding-left: 1rem;
+		font-family: 'Trebuchet MS';
+	}
+	.edit_profile_container {
+		width: 500px;
+		margin: auto;
+	}
   </style>
 </head>
 <body>
 
-<div class="edit_profile_container">
+<div class="input_form_container">
 	<table>
 		<thead>
 		<tr>
-			<th colspan="2"><span>Input Form</span></th>
+			<th colspan="4"><span>Input Form</span></th>
 		</tr>
 		</thead>
 		<body>
 			<form method="POST" action="{{ url_for('result') }}">
 			<tr>
 				<td>Age : </td>
-			<td colspan="8"><input type="text" id="age" name="age"></td>
+			<td><input type="text" id="age" name="age"></td>
 			</tr>
 			<tr>
 				<td>Gender : </td>
@@ -62,16 +76,16 @@
 					<input type="radio" name="chest_pain" id="chest_pain" value="3">Non-anginal Pain
 				</td>
 				<td>
-					<input type="radio" name="chest_pain" id="chest_pain" value="2">Asymptotic
+					<input type="radio" name="chest_pain" id="chest_pain" value="4">Asymptotic
 				</td>
 			</tr>
 			<tr>
 				<td>Resting Blood Pressure : </td>
-				<td colspan="8"><input type="text" id="blood_pressure" name="blood_pressure"></td>
+				<td><input type="text" id="blood_pressure" name="blood_pressure"></td>
 			</tr>
 			<tr>
 				<td>Serum Cholestrol : </td>
-				<td colspan="8"><input type="text" id="cholestrol" name="cholestrol"></td>
+				<td><input type="text" id="cholestrol" name="cholestrol"></td>
 			</tr>
 			<tr>
 				<td>Fasting Blood Sugar > 120 mg/dl : </td>
@@ -96,7 +110,7 @@
 			</tr>
 			<tr>
 				<td>Max heart rate achieved : </td>
-				<td colspan="8"><input type="text" id="heart_rate" name="heart_rate"></td>
+				<td><input type="text" id="heart_rate" name="heart_rate"></td>
 			</tr>
 			<tr>
 				<td>Exercise induced angina : </td>
@@ -109,7 +123,7 @@
 			</tr>
 			<tr>
 				<td>ST depression induced by exercise relative to rest : </td>
-				<td colspan="8"><input type="text" id="st_depression" name="st_depression"></td>
+				<td align="left"><input type="text" id="st_depression" name="st_depression"></td>
 			</tr>
 			<tr>
 				<td>Peak exercise ST segment : </td>
@@ -125,7 +139,7 @@
 			</tr>
 			<tr>
 				<td>Number of major vessels (0-3) colored by flourosopy</td>
-				<td colspan="8"><input type="text" id="vessels" name="vessels"></td>
+				<td align="left"><input type="number" id="vessels" name="vessels" min="0" max="3" value="0"></td>
 			</tr>
 			<tr>
 				<td>Thal : </td>
@@ -140,7 +154,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><button id="submit_button">Submit</button></td>
+				<td colspan="4" align="right"><button id="submit_button">Submit</button></td>
 			</tr>
 			</form>
 	</table>
