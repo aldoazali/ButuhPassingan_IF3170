@@ -11,7 +11,7 @@ def load_model():
 
     global model
 
-    model = joblib.load('model_knn.joblib')
+    model = joblib.load("model_knn.joblib")
 
 
 @app.route('/') 
