@@ -19,6 +19,15 @@ def my_form():
 	load_model()
 	return render_template('main.html')
 
+@app.route('/main') 
+def main_form():
+	load_model()
+	return render_template('main.html')
+
+@app.route('/about')
+def about_us():
+    return render_template('about.html')
+
 
 @app.route('/result', methods=['GET', 'POST'])
 def result():

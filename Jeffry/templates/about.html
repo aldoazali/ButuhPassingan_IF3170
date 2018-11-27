@@ -14,15 +14,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body style="background-image: url(background.png); background-attachment: fixed;">
+<body style="background-image: url({{ url_for('static', filename='background.png') }}); background-attachment: fixed;">
     <nav class="blue lighten-1 waves-effect waves-light" style="position: fixed;">
         <div class="nav-wrapper container">
             <div class="left col m10 s12" style="padding:0% 0% 0% 30%;">
-                <a href="index.html" style="font-family: 'Courgette', cursive; font-size:44px;">Butuh Passingan</a>
+                <a href="main" style="font-family: 'Courgette', cursive; font-size:44px;">Butuh Passingan</a>
             </div>
             <div class="right m2">
                 <ul class="right hide-o-med-and-down">
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about">About Us</a></li>
                 </ul>
             </div>
         </div>
@@ -37,7 +37,7 @@
                         <div class="col s12 m12">
                             <div class="card horizontal hoverable red lighten-1 white-text">
                                 <div class="card-image">
-                                    <img src="dafi.jpg" style="width:200px; height:auto;">
+                                    <img src="{{ url_for('static', filename='dafi.jpg') }}" style="width:200px; height:auto;">
                                 </div>
                                 <div class="card-stacked">
                                     <div class="card-content">
@@ -54,7 +54,7 @@
                         <div class="col s12 m12">
                             <div class="card horizontal hoverable orange lighten-1 white-text">
                                 <div class="card-image">
-                                    <img src="andre.jpg" style="width:200px; height:auto;">
+                                    <img src="{{ url_for('static', filename='andre.jpg') }}" style="width:200px; height:auto;">
                                 </div>
                                 <div class="card-stacked">
                                     <div class="card-content">
@@ -71,7 +71,7 @@
                         <div class="col s12 m12">
                             <div class="card horizontal hoverable green lighten-1 white-text">
                                 <div class="card-image">
-                                    <img src="aldo.jpg" style="width:200px; height:auto;">
+                                    <img src="{{ url_for('static', filename='aldo.jpg') }}" style="width:200px; height:auto;">
                                 </div>
                                 <div class="card-stacked">
                                     <div class="card-content">
@@ -88,7 +88,7 @@
                         <div class="col s12 m12">
                             <div class="card horizontal hoverable purple lighten-1 white-text">
                                 <div class="card-image">
-                                    <img src="jeffry.jpg" style="width:200px; height:auto;">
+                                    <img src="{{ url_for('static', filename='jeffry.jpg') }}" style="width:200px; height:auto;">
                                 </div>
                                 <div class="card-stacked">
                                     <div class="card-content">
@@ -105,7 +105,7 @@
                         <div class="col s12 m12">
                             <div class="card horizontal hoverable pink lighten-1 white-text">
                                 <div class="card-image">
-                                    <img src="untung.jpg" style="width:200px; height:auto;">
+                                    <img src="{{ url_for('static', filename='untung.jpg') }}" style="width:200px; height:auto;">
                                 </div>
                                 <div class="card-stacked">
                                     <div class="card-content">

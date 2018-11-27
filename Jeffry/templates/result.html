@@ -1,10 +1,94 @@
 <!DOCTYPE html>
-    <html>
-    <head>
-      <meta charset="utf-8">
-      <title>Result</title>
-    </head>
-    <body>
-	  <p>Hasil prediksi : {{hasil}}</p>
-    </body>
-  </html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Prediction Result</title>
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+  <!-- <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='materialize.css') }}">
+</head>
+<body>
+  <nav class="blue lighten-1 waves-effect waves-light" style="position: fixed;">
+    <div class="nav-wrapper container">
+        <div class="left col m10 s12" style="padding:0% 0% 0% 30%;">
+            <a href="main" style="font-family: 'Courgette', cursive; font-size:44px;">Butuh Passingan</a>
+        </div>
+        <div class="right m2">
+            <ul class="right hide-o-med-and-down">
+                <li><a href="about">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Prediction Result: {{hasil}}</h1>
+      <div class="row center">
+        <h3 class="header col s12 light"><b><u>Legends</u></b></h3><br>
+        <h5 class="header col s12 light" style="color:blue">0 means no risk <b>(you are safe!)</b></h5><br>
+        <h5 class="header col s12 light" style="color: rgb(24, 175, 160)">1 means the lowest risk</h5><br>
+        <h5 class="header col s12 light" style="color:rgb(64, 238, 11)">2 means the medium risk</h5><br>
+        <h5 class="header col s12 light" style="color: rgb(255, 115, 0)">3 means the high risk</h5><br>
+        <h5 class="header col s12 light" style="color: red">4 means the highest risk <strong>(you are nearly dead!)</strong></h5><br>
+      </div>
+      <div class="row center">
+        <a href="main" id="download-button" class="btn-large waves-effect waves-light orange">Done</a>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About us</h5>
+          <p class="grey-text text-lighten-4" style="text-align: justify">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated. The sentence was created by Materialize and the project was made due to <b>IF3170 - Artificial Intelligence</b> subject by Andreas Halim, Aldo Azali, Dafi Ihsandiya Faraz, Jeffry, Untung Tanujaya.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Full Name</h5>
+          <ul>
+            <li>Andreas Halim</li>
+            <li>Dafi Ihsandiya Faraz</li>
+            <li>Aldo Azali</li>
+            <li>Untung Tanujaya</li>
+            <li>Jeffry</li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Student ID</h5>
+          <ul>
+            <li>13516003</li>
+            <li>13516057</li>
+            <li>13516125</li>
+            <li>13516135</li>
+            <li>13516156</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>

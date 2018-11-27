@@ -14,11 +14,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body>
+<body style="background-image: url({{ url_for('static', filename='background.png') }}); background-attachment: fixed;">
     <nav class="blue lighten-1 waves-effect waves-light" style="position: fixed;">
         <div class="nav-wrapper container">
-            <div class="center col m10 s12" style="padding:0px 0px 0px 0px;">
-                <a href="index.html" style="font-family: 'Courgette', cursive; font-size:44px;">Butuh Passingan</a>
+            <div class="left col m10 s12" style="padding:0% 0% 0% 30%;">
+                <a href="main" style="font-family: 'Courgette', cursive; font-size:44px;">Butuh Passingan</a>
+            </div>
+            <div class="right m2">
+                <ul class="right hide-o-med-and-down">
+                    <li><a href="about">About Us</a></li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -154,7 +159,7 @@
                                                     </label>
                                                 </p>
                                             </div>
-                                            <div class="row">Number of major vessels (0-3) colored by flourosopy:<input type="text" id="st_depression" name="st_depression" class="blue-text text-darken-2"></div>
+                                            <div class="row">Number of major vessels (0-3) colored by flourosopy:<input type="number" id="vessles" name="vessels" class="blue-text text-darken-2" min="0" max="3" value="0"></div>
                                             <div class="row">
                                                 <p>
                                                     <p>Thal :</p>
@@ -165,7 +170,7 @@
                                                 </p>
                                                 <p>
                                                     <label>
-                                                        <input type="radio" name="thal" id="thal" value="6"" />
+                                                        <input type="radio" name="thal" id="thal" value="6" />
                                                         <span>Fixed Defect</span>
                                                     </label>
                                                 </p>
