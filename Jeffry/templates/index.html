@@ -14,11 +14,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body>
+<body style="background-image: url(background.png); background-attachment: fixed;">
     <nav class="blue lighten-1 waves-effect waves-light" style="position: fixed;">
         <div class="nav-wrapper container">
-            <div class="center col m10 s12" style="padding:0px 0px 0px 0px;">
-                <a href="main.html" style="font-family: 'Courgette', cursive; font-size:44px;">Butuh Passingan</a>
+            <div class="left col m10 s12" style="padding:0% 0% 0% 30%;">
+                <a href="index.html" style="font-family: 'Courgette', cursive; font-size:44px;">Butuh Passingan</a>
+            </div>
+            <div class="right m2">
+                <ul class="right hide-o-med-and-down">
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -34,7 +39,7 @@
                                 <div class="card">
                                 </div>
                                 <div class="card-stacked">
-                                    <div class="card-content" style="margin: 0px 40px 0px 40px">
+                                    <div class="card-content" style="margin: 20px 80px 0px 80px">
                                         <form method="POST" action="{{ url_for('result') }}">
                                             <div class="row">Age: <input type="text" id="age" name="age" class="blue-text text-darken-2"></div>
                                             <div class="row">
